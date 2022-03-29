@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+:root{
+	--main-background: #0b0c0f;
+	--main-fonts-color: #fff;
+	--main-decor-color:#3a026e;
+    --main-header-background:#21252e;
+	--main-font-family: 'Poppins', sans-serif;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	scroll-behavior: smooth;
+}
+
+main{
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	background: var(--main-background);
+}
+
+/*────────────────── 
+       header
+──────────────────*/
+
+header{
+	width: 100%;
+	height: 25px;
+	display: flex;
+    align-items: center; 
+	justify-content: space-around; 
+    background: transparent;
+	position: fixed;
+	top: 0;
+	transition: 0.3s;
+	z-index: 5;
+}
+.nav-show{
+	opacity: 0;
+}
+
+header:hover{
+	opacity: 1;
+	background: var(--main-header-background);
+}
+
+.logo img{
+	padding-top: 5px;
+	height: 50px;
+	cursor: pointer;
+}
+
+.nav-bar{
+	list-style:none;
+	position: center;
+	display: inline-flex;
+}
+
+a.nav-link{
+	margin: 2px;
+	padding: 5px 10px;
+	text-decoration: none;
+	color: var(--main-fonts-color);
+	font-family: var(--main-font-family);
+	cursor: pointer;
+	text-transform: uppercase;
+}
+
+.active{
+	background: var(--main-decor-color);
+}
+
+.nav-link:hover {
+	color: #000000;
+    background: var(--main-decor-color);
+}
+
+/*──────────────────
+       home
+──────────────────*/
+
+#home{ 	
+	margin: auto;
+	height: 100vh;
+	color: var(--main-fonts-color);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+#home .filter{
+	background: url('https://images.unsplash.com/photo-1544099858-75feeb57f01b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80') no-repeat;
+	background-size: cover;
+	background-position:center;
+    position: absolute;
+    top: 0px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+	opacity:.20;
+}  
+
+.intro {
+	text-align:center;
+    color: var(--main-fonts-color);
+	z-index: 1;
+	margin: auto;
+	padding: 20px;
+}
+
+.intro  p{
+    margin: 5px;
+	font-size:1.2rem;
+	font-family: var(--main-font-family);
+	text-align:center;
+}
+
+ h3{
+	padding-bottom: 15px;
+    letter-spacing: normal;
+    font-family: var(--main-font-family);
+	font-style: normal;
+	font-size: 60px;
+	color: var(--main-fonts-color);
+	text-shadow: 0px 0px 40px var(--main-decor-color);
+}
+
+
+/*──────────────────
+    social media
+──────────────────*/
+
+.social-media{
+	padding: 10px;
+	display: flex;
+	position: center;
+    align-items: space-around;
+	justify-content:center;
+}
+
+.social-media a {
+    margin: 10px;
+    font-size: 2rem;
+    text-align:center;
+    display: inline-block;
+	color: var(--main-fonts-color);
+}
+
+.social-media a i{
+	cursor: pointer;
+}
+
+.social-media  a:hover {
+	color: var(--main-decor-color);
+	text-shadow: 0 0 50px var(--main-decor-color);
+}
+
+/*──────────────────
+      projects
+──────────────────*/
+
+#projects{
+	margin-top:100px;
+    height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+    justify-content: center;
+	text-align:center;
+	color: var(--main-fonts-color);
+}
+#projects h3{
+    padding-top: 70px;
+}
+#projects p{
+	font-family: var(--main-font-family);
+	font-size:1.2rem;
+	padding: 10px;
+}
+
+.work{
+	display: flex; 
+	flex: 1;
+    flex-wrap: wrap;
+    justify-content:center;
+	align-items: center;
+	padding: 20px;
+}
+
+.card{
+	display: flex;
+	flex-direction: column;
+	margin: 20px;
+	width: 200px;
+	height:250px;
+	border-radius:12px;
+    background:var(--main-decor-color);
+}
+
+.card img{
+	width: 100%;
+	height:70%;
+	border-radius:10px 10px 0px 0px;
+}
+
+.card .work-content{
+	text-align: center;
+	padding: 10px 5px;
+	font-size: 1rem;
+	color: var(--main-fonts-color);
+	font-family: var(--main-font-family);
+	cursor: pointer;
+}
+
+.card a{
+	text-decoration: none;
+}
+
+.card .work-content:hover{
+    color:#202020;
+}
+
+.card:hover{
+	box-shadow: 0 0 1.5rem gray;
+}
+
+/*──────────────────
+      Contact
+──────────────────*/
+
+#contact{
+	margin: auto;
+	padding-bottom: 20px;
+	height: 600px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	color: var(--main-fonts-color);
+}
+	
+#contact p{
+	padding:10px;
+	text-align:center;
+	font-size:1.2rem;
+	font-family: var(--main-font-family);
+}
+
+/*────────────────── 
+       footer
+──────────────────*/
+
+footer {
+	width: 100%;
+	height: 100%;
+    background-color: var(--main-header-background);
+}
+
+.copyright {
+	color: #fff;
+	font-size: 1.2rem;
+	line-height: 40px;
+	text-align: center;
+}
+
+.copyright a{
+	color: #fff;
+	font-size: 1rem;
+	letter-spacing: 1px;
+    text-decoration: none;
+}
+
+.copyright a:hover{
+	color: var(--main-decor-color);
+}
+
+/*──── hr ─────*/
+
+hr {
+    background: var(--main-decor-color);
+	margin: 2px;
+	height: 3px;
+	width: 150px;
+    border-radius:5px;
+	border: hidden;
+	margin-inline-start: auto;
+    margin-inline-end: auto;
+}
+
+/*────────────────── 
+     Scrollbar
+──────────────────*/
+::-webkit-Scrollbar{
+    width: 5px; 
+	background: rgba(5,5,5,1);
+}
+::-webkit-Scrollbar-thumb{
+	border-radius: 10px;
+	background: var(--main-decor-color);
+	box-shadow: inset 0 0 20px var(--main-decor-color);
+}
+::-webkit-Scrollbar-track{
+	margin-top: 80px;
+	border-radius: 10px;
+}
+
+/*────────────────── 
+     hamburger
+──────────────────*/
+.hamburger {
+	display: none;
+}
+
+.hamburger div{
+	width: 30px;
+	height: 3px;
+	background: #dbdbdb;
+	margin: 5px;
+	transition:all 0.3s ease;
+}
+
+.toggle .line1{
+	transform: rotate(-45deg) translate(-5px,6px);
+}
+
+.toggle .line2{
+	opacity: 0;
+}
+
+.toggle .line3{
+	transform: rotate(45deg) translate(-5px,-6px);
+}
+
+@keyframes navLinkFade{
+	from{
+		opacity:0;
+		transform: translatex(50px);
+	}
+	to{
+		opacity: 1;
+		transform:translatex(0px);
+	}
+}
+
+/*────────────────── 
+    media queries
+──────────────────*/
+
+@media only screen and (max-width: 1484px) and (min-width: 1214px) {
+	.work{
+        padding:20px 20%;
+    }
+}
+@media only screen and (max-width: 1214px) and (min-width: 1000px) {
+	.work{
+        padding:20px 12%;
+    }
+}
+
+
+@media only screen and (max-width: 500px) {
+
+	#home, #projects, #contact{
+        overflow-x: hidden;
+	}
+	header{
+		background-color: var(--main-header-background);
+	}
+	.logo{
+		position:absolute;
+		top: 2px;
+		left: 30px;
+	}
+	.nav-show{
+		opacity: 1;
+	}	 
+	.nav-bar{
+		position:fixed;
+		top: 0px;
+		right:0;
+		width:60%;
+		height: 100vh;
+		display:flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content:space-evenly;
+		background:var(--main-header-background);
+		transform:translatex(100%);
+		transition: transform 0.5s ease-in;
+		z-index: -1;
+	}
+	.hamburger{
+		position:absolute;
+		top: 17px;
+		right: 25%;
+		display: block;
+		cursor:pointer;
+		z-index: 5;
+	}	
+	.nav-bar li{
+		opacity:0;
+	}
+}
+
+.nav-active{
+	transform:translatex(0%);
+}
+
+  form {
+        margin: 0 auto;
+        max-width: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      input {
+        font-size: 28px;
+        margin-top: 20px;
+      }
+      p span {
+        font-size: 40px;
+        color: blue;
+      }
+    .center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+th{
+    padding: 5px;
+
+}
+th, td {
+  text-align: center;
+}
+
+      body{
+        text-align:center;
+        
+      }
+      p, button {
+        font-size: 20px;
+        margin-top: 20px;
+      }
+      p span {
+        color: blue;
+      }
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu:400,400i,700);
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #a300b5;
+	font-family: ubuntu;
+}
+
+header {
+  align-items: center;
+  text-align: center;
+  background: #3a026e;
+}
+
+header img {
+  width: 50px;
+  background: white;
+  border-radius: 5px;
+  margin: 0 20px 0 40px;
+}
+
+article {
+  border: 3px solid #a0a0a0;
+  width: 90%;
+  margin: 20px auto;
+  border-radius: 10px;
+  padding: 10px;
+}
+p{
+    color: #a0a0a0;
+
+}
+
+
+h1{
+    text-align:center;
+    color:#ffffff;
+
+}
+      </style>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>My Blog</title>
+  </head>
+  <body>
+    <header>
+      <h1>Nico's Blog</h1>
+    </header>
+
+   
+
+    
+    <main> 
+
+      <article>
+
+        
+        <h3>Standup</h3>
+        <hr />
+        <p>
+       I was destroying my opponent in a middle school tennis tournament. And I want to get<br> something out of the way first: why are softballs called SOFTballs? They aren’t soft! Anyways, I<br>was 15 points away from winning and was in an intense rally with my opponent. I managed to <br>hit a smashing blow to the ball and won the game. It was now the final game of the tournament. <br>The score was still tied 20 minutes in. As you could imagine the suspense was rising and 
+<br>everyone here might be expecting me to say how it all went wrong. Well actually, I performed a <br>perfect overhand serve and won the game. Which is what I would say if I won the game.<br><br><br><br>
+
+What actually happened was I precariously performed a scuffed serve and my opponent <br>must have drank a lot of caffeine before this because he hit the fastest “soft”-ball I've ever seen. <br>Guess what happened next! 5, 4, 3, 2, 1. Time’s up You’re Wrong (with emphasis)! Unless you <br>got it right, then good job. <br>I of course got knocked out by the so-called softball and my middle schoollost the tournament.
+          
+         
+        
+
+        </p>
+        <p class="date">2022-02-28</p>
+      </article>
+
+      
+      <article>
+        <h3>I am From poem</h3>
+        <hr />
+        <p>
+I am from laptops<br>
+From Dell and Lenovo<br>
+I am from the many hornet nests near the porch<br>
+(Annoying, numerous, buzzing in my ear)<br>
+I am from the Oak tree<br>
+gargantuan and towering<br>
+I’m from Camp Michigania and hard workers<br>
+From Ladendorf and Zhao<br>
+I’m from the mathematicians and musicians<br>
+From “Do your Kumon books” and “Go outside”<br>
+I’m from science and evolution<br>
+I’m from Connecticut and China<br>
+Chili and Nongshim Spicy Ramen<br>
+From the three-year-old me almost speeding down a hill<br>
+On a golf cart<br>
+The cousin’s house in Maryland<br>
+In a bookshelf’s bottom shelf resides an archive of family photo’s<br>
+So no one is forgotten<br>
+          <img src="https://image.migros.ch/product-zoom/5e74f6f60971eecdaa6ff9fadf6b9e444fce8610/nongshim-hotspicy-ramen.jpg" alt = "nongshim" width="400" height="400" > <br> <img src = "https://brandculture.com/bcc-content/uploads/2011/07/Kumon_logo_1.jpg" alt = "kumon" width="600" height="200">
+         
+        
+
+        </p>
+        <p class="date">2022-02-28</p>
+      </article>
+
+
+ 
+
+
+
+          <article>
+        <h3>My Superpower</h3>
+        <hr />
+        <p>I discovered my power in a soccer match. My team was about to score but the game was going to end in one second (it was 1-0 for the enemy team). I closed my eyes and focused on a reality where everything was frozen in place. Everything was frozen in place when I reopened my eyes. I moved the ball to the goal and willed time to start again. The game went into overtime and my team won.<br><br>
+          My power is the ability to stop time (time keeps going for me but I do not age). I use my ability to freeze time and stop all wrongdoing everywhere. I freeze time and scower every inch of the earth for crime because of my infinite time. I am effectively omnipotent. I stop all conflict and remove any opposition to me. I also use my superpower to fix ALL problems. The world would be spotless and infinitely advanced. <br><img src="https://cdn.discordapp.com/attachments/929873397775728720/930992662985723924/179.png" alt="kronos"><br> My superhero name would be Kronos. In Greek Mythology Kronos is the lord of time. Kronos is also an immortal, extremely powerful Titan. The name "Kronos" shows my omnipotence and relates to my power over time. My superhero outfit would be an invisibility cloak. I would invent the invisibility cloak with my infinite time. The invisibility cloak would allow me to stay hidden while unfreezing time. 
+          
+
+         
+        
+
+        </p>
+        <p class="date">2022-01-11</p>
+      </article>
+
+            <article>
+        <h3>Semester Reflection</h3>
+        <hr />
+        <p>
+          
+          
+          This semester has gone alright relative to the absolutely horrendous previous school year. Last year I was completely online and did radically bad in English class. My other classes are also good relative to last year, but the change is most dramatic with English. The reason for the sudden jump from a 70 to a 90 in English is that conversing with peers is more important in English. Discussing topics with other people helps me understand them better. <br><br>My favourite part of English class this semester is the past few weeks. The 12 Angry Men play was extremely enjoyable to read. I also enjoyed learning more in depth about the legal system and reasonable doubt. The legal knowlege was useful in understanding the strikingly interesting podcast <a href="https://serialpodcast.org/season-one">Serial.</a> Listening to Serial and creating an evidence board was the most fun i've ever had in English class.<br><br> I think that we need to do more group activities and projects in general for the second semester. The book box presentation was a great experience and better than just writing an analysis essay. I think that we should do less timed writings. Writing is hard enough when I am not under time pressure. My blog suggestion is to create a blog about someone's favorite class and what they think about their schedule.
+
+        </p>
+        <p class="date">2021-12-08</p>
+      </article>
+
+       <article>
+        <h3>The Eastern Front Interactive Story</h3>
+        <hr />
+        <p>
+          <a href="https://docs.google.com/presentation/d/1CtLAyo3UtqgXYcT73xOm_djqcjKCSHblBIIaNtUl7Lw/edit?usp=sharing">The Story</a> <br> You can watch this well made animated video to understand more about the Battle of Stalingrad and the Eastern Front
+            <iframe width="420" height="315" src="https://www.youtube.com/embed/pucJTYK7_Yo"></iframe> 
+          
+
+        </p>
+        <p class="date">2021-11-16</p>
+      </article>
+
+
+      <article>
+        <h3>Short Story</h3>
+        <hr />
+        <p>
+          Character: Taxi Driver, Situation: Gets a cryptic letter, Prop: Lucky penny, Setting: a rainy street at night <br> 
+        A taxi driver was sitting in his cab after dropping off a mysterious client on a rainy street.<br> <img src="https://diymfa.com/wp-content/uploads/2012/09/Bess-Cozby-5-275x275.jpg" alt = "setting"> <br> He sighed after a long days work and was about to start driving home when his phone buzzed with a notification. The taxi driver stopped the car and slowly looked down. <br> <br> The message was a cryptic letter sent by an anonymous person. The message read "tommorow, midnight, this place". The message sent chills down the taxi driver's spine. The taxi driver fumbled with his cab's compartment and got out his lucky penny. He planned to flip the penny. If it landed on heads: he would pursue this odd mystery. If it landed on tails: he would continue being a taxi driver and forget the weird message. As the taxi driver flipped the penny, time seemed to slow down. The penny landed on heads. <br> <br> The cab driver wondered how the person who sent the message obtained his phone number. He realized that everyone he picks up in his cab has his phone number. Perhaps the anonymous message sender was the sharply dressed gentlemen he just dropped off, the cab driver thought. The taxi driver, with a determined look on his face, drove back to his house to investigate this mystery.
+
+
+        </p>
+        <p class="date">2021-11-02</p>
+      </article>
+
+        <article>
+        <h3>Infographic about Object-Oriented Programming</h3>
+        <hr />
+        <p>
+          <img src="https://cdn.discordapp.com/attachments/863930974382850071/900206864384536626/Object_Oriented_Programming.png" alt="OOP"><br>
+          The documentation for classes can be found here: https://docs.python.org/3/tutorial/classes.html. The documentation for other types of classes (enums etc) can also be found at docs.python.org.
+        </p>
+        <p class="date">2021-10-19</p>
+      </article>
+      
+     
+
+  <article>
+        <h3>The Soundtrack of My Life</h3>
+        <hr />
+        <p>
+          This blog post contains my favorite songs by amazing composers:<br><br><br><br>
+      
+    
+       <iframe width="420" height="315" src="https://www.youtube.com/embed/tVZM666W6lc"></iframe><br>
+       This concerto is the current violin solo that I am learning. <br>The concerto was popularized by the famous soviet violinist David Oistrakh and composed by Kabalevsky. <br>The piece seems extremely energetic to me, and is heaps of fun to learn.
+      <br><br><br><br>
+
+      <iframe width="420" height="315" src="https://www.youtube.com/embed/5AkQrnLPvC4"></iframe><br>
+      This piece is the main song for the 2021 region orchestra. <br> The piece is by Brahms during the Romantic era of music. <br> I enjoy the fast high note tremolos (the rapid reiteration of the same note) and the fun spicatto (bouncing of the bow) in the piece. <br><br><br><br>
+      <iframe width="420" height="315" src="https://www.youtube.com/embed/QCKL95HAdQ8"></iframe><br>
+      This concerto (especially the 1st movement) is one of my favorites to listen to while studying/doing schoolwork.<br> The concerto is by the famous Russian composer Tchaikovsky during the Romantic period.<br> The first movement sounds very bold and triumphant and has the most catchy melody.
+      <br><br><br><br>
+      <iframe width="420" height="315" src="https://www.youtube.com/embed/dfFopsFofz4"></iframe><br>
+      This is a catchy rebel song/folk tune that sings about the Irish struggle during the Irish War of Independence. <br> The song talks about British rule in Ireland "In nineteen hundred and sixteen, the forces of the crown, to take the orange, white and green, bombarded Dublin town". <br> I love learning about history and especially the eventful history of Ireland and the British isles.
+      <br><br><br><br>
+
+    <iframe width="420" height="315" src="https://www.youtube.com/embed/4ny6cHKV-zg"></iframe><br>
+    This piece was one of my favorite violin solos. <br> The tune is composed by Fiocco during the late Baroque period. <br> I like to play the piece because of all the exciting quick notes.
+    <br><br><br><br>
+
+     <iframe width="420" height="315" src="https://www.youtube.com/embed/Dg0IjOzopYU"></iframe><br>
+      I have saved the best for last: the Minecraft Soundtrack by C418. <br> The Minecraft Soundtrack is extremely nostalgic for me. <br>All of the songs remind me of when I was younger and playing my favorite game. <br> I would traverse through the blocky world without a care in the world. <br>  
+      
+      
+       
+      
+        </p>
+        <p class="date">2021-10-5</p>
+      </article>
+
+
+
+
+
+
+
+
+
+
+
+
+      
+        <article>
+        <h3>Thoughts On Cancel Culture</h3>
+        <hr />
+        <p>
+       
+        Canceling someone can be a very severe event (even career ending). If you have not read the article that is being discussed in this blog post you can find it 
+        <a href="https://www.nytimes.com/2019/10/31/style/cancel-culture.html">here.</a>
+         I feel that cancel culture is overall not a positive element of social media. I think that canceling someone who has recently done an offensive thing is justified, but the punishment has to fit the crime (ruining someone's life over a small thing). One of the students in the article said "Now they'll forever be thought of as that action, not for the person they are,". I agree wholeheartedly with this quote as people change over time. It is not right to ruin a person's life for who they were ten years ago. However, in most of the cases in the article, I think the cancelation was justified. D's intentions are clearly to insult Mike "D called Mike a homophobic slur". This cancelation is justified because it was recent and was severe (homophobic). Before canceling someone, make sure the punishment fits the crime. <br><br> I have never "canceled" someone (I do not have any social media accounts) but I do support some cancelations. For example: a small content creator said a racial slur and did not apologize or seem apologetic at all. However, I can empathize with the person being canceled as they are just a teenager and may have not learned better. The punishment in this case was just in my eyes. I have never been canceled but I assume being canceled might have a huge mental toll on a person. L was impacted by her cancelation "I'm very pronre to questioning everything I do". This quote shows the negative effects of being canceled. I imagine that being canceled would make me feel similar to L. Being "canceled" can have a huge effect on someone's life and shouldn't be taken lightly. <br> If you want to learn more about the mental effects that being "canceled" has on a person you may read <a href="https://www.verywellmind.com/the-mental-health-effects-of-cancel-culture-5119201">this article.</a>
+        </p>
+        <p class="date">2021-09-21</p>
+      </article>
+      
+
+        <article>
+        <h3>The Growth Mindset and Grit</h3>
+        <hr />
+        <p>
+          I think that grit is fundamental for all people regardless of age. I agree with the content presented. In the video, Duckworth says “Growth mindset is a great idea for building grit”. I have found the growth mindset being useful to be true in my school experience. The growth mindset helps me persevere even when I receive a bad grade because I know that I can just improve. The growth mindset also makes it easier to learn new skills. What I took away from the video is that hard work is more important than IQ. If you are less intelligent than someone you just have to work harder. This information is useful in day to day life and should remind you to work hard to achieve your goals.
+        </p>
+        <p class="date">2021-09-07</p>
+      </article>
+      
+      <article>
+        <h3>English Class Freshmen Advice</h3>
+        <hr />
+        <p>
+          Freshmen may feel overwhelmed at the change from middle school to highschool but this advice should help ease them in to their first year. The first bit of advice is to stay organized as highschool has more to keep track of. The second tip is to have a sheet to write down homework and when homework is due. The next tip is to always turn in work (late is better than never). The fourth tip is to have a device for checking schoology (schoology is where resources are located). The final tip is to care about grades and learning (not everything is about grades). These tips apply to most classes and the main principle is to stay organized.
+        </p>
+        <p class="date">2021-08-20</p>
+      </article>
+      
+
+    </main>
+    <footer>
+
+    </footer>
+  </body>
+</html>
